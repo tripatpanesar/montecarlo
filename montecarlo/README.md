@@ -19,7 +19,8 @@ The Analyzer class takes in a Game object and runs analysis tests on it which is
 
 ## Methods
 
-For the Die class, there are 4 methods:   
+For the Die class, there are 4 methods:  
+```
     __init__(self, faces)  
         Initializes the die and takes in faces as np array.   
         Checks that faces are either integers or strings.   
@@ -34,9 +35,11 @@ For the Die class, there are 4 methods:
         Number of rolls can be specified at input  
         Will return outcomes as a list  
     show_die(self)  
-        Will return a copy and the state of the die   
+        Will return a copy and the state of the die
+```  
 
-For the Game class, there are 3 methods:  
+For the Game class, there are 3 methods: 
+```
     __init__(self, dice)  
         Initializes dice  
         Creates empty pandas dataframe to store rolls and plays    
@@ -46,9 +49,11 @@ For the Game class, there are 3 methods:
     show_results(self, die_format='wide')  
         Takes in the previous data frame from roll function  
         Returns the dataframe to the user  
-        Defaults to wide but can be specified for narrow  
+        Defaults to wide but can be specified for narrow
+```  
 
-For the Analyzer class, there are 5 methods:  
+For the Analyzer class, there are 5 methods: 
+```
     __init__(self, game)  
         Initializes game  
         Checks to make sure inputted game is of game object  
@@ -67,18 +72,19 @@ For the Analyzer class, there are 5 methods:
     perm_count(self)  
         Calculates the total number of permutations in a game  
         Runs through using a lambda function  
-        Returns the perms as a pandas dataframe with a column of counts  
+        Returns the perms as a pandas dataframe with a column of counts
+```
 
 ## Calling on Classes
 Classes can be called. An example of a full run through is below:
-
+```
 die = Die(np.array([1,2,3,4,5,6]))  
 game = Game([die, die, die, die])  
 game.roll(1000)  
 analysis = Analyzer(game)  
 analysis.face_counts_per_roll()  
 analysis.jackpot()  
-        
+  ```      
 
 ## Examples
 This package and its functions can be used to simulate gambling games
